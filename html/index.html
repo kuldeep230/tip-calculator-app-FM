@@ -1,45 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  <link rel="stylesheet" href="../css/style.css">
-  
-  <title>Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Tip calculator app</title>
 
-  Bill
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tip-card-container">
+      <img src="../images/logo.svg" alt="" />
+      <div class="tip-card-details">
+        <div class="left-section">
+          <h4>Bill</h4>
+          <input
+            type="number"
+            name="bill-amount"
+            id="bill-amount"
+            placeholder="0"
+          />
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+          <h4>Select Tip %</h4>
+          <div class="tip-choice-percentage">
+            <div class="tip-percentage">5%</div>
+            <div class="tip-percentage">10%</div>
+            <div class="tip-percentage">15%</div>
+            <div class="tip-percentage">25%</div>
+            <div class="tip-percentage">50%</div>
+            <input
+              type="number"
+              name="tip-percentage"
+              id="tip-percentage"
+              placeholder="Custom"
+            />
+          </div>
 
-  Number of People
+          <h4>Number of People</h4>
+          <input
+            type="text"
+            name="num-of-people"
+            id="num-of-people"
+            placeholder="0"
+          />
+        </div>
+        <div class="right-section">
+          <div class="tip-amount">
+            <p>
+              <span>Tip Amount</span>
+              <span>/ person</span>
+            </p>
+            <span id="tip-per-person"
+              ><img src="../images/icon-dollar.svg" alt=""
+            /></span>
+          </div>
+          <div class="total-tip-per-person">
+            <p>
+              <span>Total</span>
+              <span>/ person</span>
+               <span id="tip-per-person"
+              ><img src="../images/icon-dollar.svg" alt=""
+            /></span>
+          </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </div> -->
+  </body>
 </html>
