@@ -11,6 +11,12 @@
       sizes="32x32"
       href="../images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/style.css" />
 
     <title>Tip calculator app</title>
@@ -27,60 +33,69 @@
     </style>
   </head>
   <body>
-    <div class="tip-card-container">
+    <div class="head-image-title">
       <img src="../images/logo.svg" alt="" />
+    </div>
+    <div class="tip-card-container">
       <div class="tip-card-details">
-        <div class="left-section">
-          <h4>Bill</h4>
-          <input
-            type="number"
-            name="bill-amount"
-            id="bill-amount"
-            placeholder="0"
-          />
-
-          <h4>Select Tip %</h4>
-          <div class="tip-choice-percentage">
-            <div class="tip-percentage">5%</div>
-            <div class="tip-percentage">10%</div>
-            <div class="tip-percentage">15%</div>
-            <div class="tip-percentage">25%</div>
-            <div class="tip-percentage">50%</div>
-            <input
-              type="number"
-              name="tip-percentage"
-              id="tip-percentage"
-              placeholder="Custom"
-            />
+        <div class="sections">
+          <div class="left-section">
+            <div class="bill-amount-section">
+              <h4>Bill</h4>
+              <img class="input-image" src="../images/icon-dollar.svg" alt="" />
+              <input
+                type="number"
+                name="bill-amount"
+                id="bill-amount"
+                placeholder="0"
+              />
+            </div>
+            <div class="tip-selection-section">
+              <h4>Select Tip %</h4>
+              <div class="tip-choice-percentage">
+                <button class="tip-percentage">5%</button>
+                <button class="tip-percentage">10%</button>
+                <button class="tip-percentage">15%</button>
+                <button class="tip-percentage">25%</button>
+                <button class="tip-percentage">50%</button>
+                <input
+                  type="number"
+                  name="tip-percentage-custom"
+                  class="tip-percentage"
+                  id="tip-percentage-custom"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+            <div class="num-people-block">
+              <h4>Number of People</h4>
+              <img class="input-image" src="../images/icon-person.svg" alt="" />
+              <input
+                type="number"
+                name="num-of-people"
+                id="num-of-people"
+                placeholder="0"
+              />
+            </div>
           </div>
-
-          <h4>Number of People</h4>
-          <input
-            type="text"
-            name="num-of-people"
-            id="num-of-people"
-            placeholder="0"
-          />
-        </div>
-        <div class="right-section">
-          <div class="tip-amount">
-            <p>
-              <span>Tip Amount</span>
-              <span>/ person</span>
-            </p>
-            <span id="tip-per-person"
-              ><img src="../images/icon-dollar.svg" alt=""
-            /></span>
-          </div>
-          <div class="total-tip-per-person">
-            <p>
-              <span>Total</span>
-              <span>/ person</span>
-               <span id="tip-per-person"
-              ><img src="../images/icon-dollar.svg" alt=""
-            /></span>
-          </div>
-            </p>
+          <div class="right-section">
+            <div class="tip-amount">
+              <p id="tip-amount-para">
+                <span>Tip Amount</span>
+                <span class="per-person">/ person</span>
+              </p>
+              <span id="tip-per-person"><span>$</span>0</span>
+            </div>
+            <div class="total-tip-per-person">
+              <p id="total-per-person-para">
+                <span>Total</span>
+                <span class="per-person">/ person</span>
+              </p>
+              <span id="tip-per-person"><span>$</span>0</span>
+            </div>
+            <div class="reset-button">
+              <button>RESET</button>
+            </div>
           </div>
         </div>
       </div>
