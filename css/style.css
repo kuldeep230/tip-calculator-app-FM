@@ -72,6 +72,15 @@ input {
   width: 80%;
   height: 23px;
 }
+#bill-amount:focus,
+#tip-percentage-custom:focus,
+#num-of-people:focus {
+  border: 2px solid rgb(38, 192, 171);
+  border-radius: 5px;
+}
+#num-of-people.error {
+  border: 2px solid #c19383;
+}
 .tip-choice-percentage {
   display: flex;
   width: 96%;
@@ -91,6 +100,16 @@ input {
   cursor: pointer;
   font-weight: 700;
   font-size: 16px;
+  border: none;
+  outline: none;
+}
+.tip-percentage:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: rgba(0, 73, 77);
+}
+.tip-percentage.active {
+  background: rgba(38, 192, 171);
+  color: rgba(0, 73, 77);
 }
 #tip-percentage-custom {
   width: 68px;
@@ -146,26 +165,39 @@ input {
   display: flex;
   margin-bottom: 20px;
 }
+.right-section .tip-amount-title,
+.total-tip-title {
+  font-size: 12px;
+}
+
 .right-section .total-tip-per-person {
   display: flex;
 }
 .right-section #tip-per-person {
   font-size: 40px;
   color: rgba(38, 192, 171);
+  margin-top: -11px;
+}
+.right-section .total-tip-person-figure {
+  margin-left: 5px;
 }
 .right-section .per-person {
   color: rgb(127, 156, 159);
-  font-size: small;
+  font-size: 10px;
 }
 .reset-button button {
   width: 95%;
-  margin: 60px -12px;
+  margin: 80px -12px;
   padding: 8px;
   border-radius: 4px;
   cursor: pointer;
-  background-color: rgba(38, 192, 171);
+  background-color: rgba(38, 192, 171, 0.2);
   outline: none;
   border: none;
   font-weight: 700;
+  color: rgba(0, 73, 77);
+}
+.reset-button button:hover {
+  background-color: hsl(185, 41%, 84%);
   color: rgba(0, 73, 77);
 }
