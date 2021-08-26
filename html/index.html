@@ -43,21 +43,25 @@
             <div class="bill-amount-section">
               <h4>Bill</h4>
               <img class="input-image" src="../images/icon-dollar.svg" alt="" />
+              <!-- <span>Can't be zero</span> -->
               <input
                 type="number"
                 name="bill-amount"
                 id="bill-amount"
                 placeholder="0"
+                maxlength="10"
+                min="0"
+              
               />
             </div>
             <div class="tip-selection-section">
               <h4>Select Tip %</h4>
               <div class="tip-choice-percentage">
-                <button class="tip-percentage">5%</button>
-                <button class="tip-percentage">10%</button>
-                <button class="tip-percentage">15%</button>
-                <button class="tip-percentage">25%</button>
-                <button class="tip-percentage">50%</button>
+                <button value="5" class="tip-percentage">5%</button>
+                <button value="10" class="tip-percentage">10%</button>
+                <button value="15" class="tip-percentage">15%</button>
+                <button value="25" class="tip-percentage">25%</button>
+                <button value="50" class="tip-percentage">50%</button>
                 <input
                   type="number"
                   name="tip-percentage-custom"
@@ -70,6 +74,7 @@
             <div class="num-people-block">
               <h4>Number of People</h4>
               <img class="input-image" src="../images/icon-person.svg" alt="" />
+              <!-- <span>Can't be zero</span> -->
               <input
                 type="number"
                 name="num-of-people"
@@ -81,17 +86,17 @@
           <div class="right-section">
             <div class="tip-amount">
               <p id="tip-amount-para">
-                <span>Tip Amount</span>
+                <span class="tip-amount-title">Tip Amount</span>
                 <span class="per-person">/ person</span>
               </p>
-              <span id="tip-per-person"><span>$</span>0</span>
+              <span id="tip-per-person"><span>$</span>0.00</span>
             </div>
             <div class="total-tip-per-person">
               <p id="total-per-person-para">
-                <span>Total</span>
+                <span class="total-tip-title">Total</span>
                 <span class="per-person">/ person</span>
               </p>
-              <span id="tip-per-person"><span>$</span>0</span>
+              <span id="tip-per-person" class="total-tip-person-figure"><span>$</span>0.00</span>
             </div>
             <div class="reset-button">
               <button>RESET</button>
@@ -99,11 +104,13 @@
           </div>
         </div>
       </div>
+      <!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>. -->
+      </div>
     </div>
-
-    <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+    <script src="../js/tip-cal-script.js"></script>
   </body>
 </html>
